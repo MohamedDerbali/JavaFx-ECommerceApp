@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="900.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.FXMLAddProduitController">
+   <children>
+      <ImageView fitHeight="369.0" fitWidth="1038.0" focusTraversable="true" layoutX="1.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@parallax.jpg" />
+         </image>
+         <effect>
+            <InnerShadow choke="0.51" height="1.0" radius="0.0" width="0.0" />
+         </effect>
+      </ImageView>
+      <AnchorPane layoutX="140.0" layoutY="273.0" prefHeight="576.0" prefWidth="819.0" style="-fx-background-color: #fff;">
+         <effect>
+            <DropShadow radius="23.3425" width="74.37" />
+         </effect>
+         <children>
+            <GridPane layoutX="130.0" layoutY="63.0" prefHeight="381.0" prefWidth="620.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="154.0" minHeight="10.0" prefHeight="154.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="model" GridPane.columnIndex="1" />
+                  <TextField fx:id="type" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="price" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="quantity" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Model" textAlignment="CENTER" wrappingWidth="200.568359375">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price" textAlignment="CENTER" wrappingWidth="200.568359375" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type" textAlignment="CENTER" wrappingWidth="200.568359375" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" textAlignment="CENTER" wrappingWidth="200.568359375" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Image" textAlignment="CENTER" wrappingWidth="200.568359375" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="image" mnemonicParsing="false" prefHeight="31.0" prefWidth="105.0" text="Choose File" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <ImageView fx:id="imageuploaded" fitHeight="150.0" fitWidth="309.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <Button fx:id="ajouter" layoutX="22.0" layoutY="504.0" mnemonicParsing="false" onAction="#ajout" prefHeight="50.0" prefWidth="105.0" text="Add Product" />
+            <Text fill="#073883" layoutX="309.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Product" wrappingWidth="213.1884765625">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Text>
+            <Label fx:id="LBMM" layoutX="188.0" layoutY="471.0" />
+            <Label fx:id="Lbprc" layoutX="188.0" layoutY="494.0" />
+            <Label fx:id="Lbtype" layoutX="188.0" layoutY="519.0" />
+            <Label fx:id="lbquantity" layoutX="188.0" layoutY="544.0" />
+            <Label fx:id="lbimage" layoutX="153.0" layoutY="555.0" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="-2.0" layoutY="-1.0" prefHeight="58.0" prefWidth="1012.0" style="-fx-background-color: #2c304d;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="136.0" layoutX="3.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo-big.png" />
+               </image>
+            </ImageView>
+            <MenuBar layoutX="340.0" layoutY="1.0" prefHeight="76.0" prefWidth="674.0" style="-fx-background-color: #2c304d;">
+               <menus>
+                  <Menu mnemonicParsing="false" onAction="#CloseAction" text="Home">
+                     <graphic>
+                        <ImageView fitHeight="57.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-page-d’accueil-50_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Sell">
+                     <items>
+                        <MenuItem fx:id="afficher" mnemonicParsing="false" onAction="#print" text="Afficher Produits" />
+                        <MenuItem fx:id="ajouterProd" mnemonicParsing="false" onAction="#add" text="Ajouter Produits" />
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-piste-cyclable-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+                  <Menu mnemonicParsing="false" onAction="#CloseAction" text="Location">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#LocationAction" text="Bike" />
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="66.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-piste-cyclable-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+               </menus>
+               <effect>
+                  <DropShadow radius="4.75" width="0.0" />
+               </effect>
+            </MenuBar>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
